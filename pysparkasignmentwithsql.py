@@ -32,7 +32,6 @@ df_grouped = df.groupBy("product_category","Product_Subcategory").sum("Total_Sal
 # Show the result
 df_grouped.show()
 
-# COMMAND ----------
 #Calculateaggregates such as total sales per category and customer segmentation.
 #Analyzethe distribution of sales across different product categories andsubcategories.
 #Identify the top 5 best-selling products and the top 5 least-selling products.
@@ -53,8 +52,6 @@ df_orderedmonth.show()
 df_groupedLocation.show()
 df_ordered.show(1)
 
-# COMMAND ----------
-
 # Remove duplicate rows
 df_cleaned = df.dropDuplicates()
 df_cleaned = df.dropna()
@@ -69,10 +66,8 @@ df_filtered = df.filter(F.col("Transaction_Month") > 10)
 
 # Show the DataFrame after filtering outliers
 df_filtered.show()
-# Show the cleaned DataFrame
 df_cleaned.show()
 
-# COMMAND ----------
 #Write queries to extract insights such as top-performing products, sales trends, and customer behavior.
  %sql
 select * from (SELECT 
