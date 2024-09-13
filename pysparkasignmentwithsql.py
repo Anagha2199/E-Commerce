@@ -19,7 +19,7 @@ display(df)
 
 
 # Create a view or table
-df.write.format("parquet").saveAsTable("productTransactions")
+df.write.saveAsTable("productTransactions")
 
 spark.sql("SHOW TABLES").show()
 
